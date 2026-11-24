@@ -1,0 +1,37 @@
+# Employee Payroll and Deduction Analysis
+
+# Get employee details
+name = input("Enter employee name: ")
+emp_id = input("Enter employee ID: ")
+
+# Get salary details
+basic_pay = float(input("Enter basic pay: "))
+allowances = float(input("Enter allowances: "))
+overtime = float(input("Enter overtime amount: "))
+incentives = float(input("Enter incentives: "))
+
+# Calculate gross salary
+gross_salary = basic_pay + allowances + overtime + incentives
+
+# Calculate deductions
+if gross_salary > 50000:
+    deduction = gross_salary * 0.10
+else:
+    deduction = gross_salary * 0.05
+
+# Calculate net salary
+net_salary = gross_salary - deduction
+
+# Display salary statement
+print("\n----- EMPLOYEE SALARY STATEMENT -----")
+
+print("Employee Name:", name)
+print("Employee ID:", emp_id)
+print("Basic Pay:", basic_pay)
+print("Allowances:", allowances)
+print("Overtime:", overtime)
+print("Incentives:", incentives)
+
+print("Gross Salary:", gross_salary)
+print("Total Deduction:", deduction)
+print("Net Salary:", net_salary)
